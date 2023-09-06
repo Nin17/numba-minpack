@@ -1,2 +1,2 @@
 # minpack_numba
-A numba wrapper of the minpack library
+A [numba](https://numba.pydata.org) wrapper of the [minpack](https://github.com/fortran-lang/minpack/tree/main) library.
