@@ -1,3 +1,6 @@
 [submodule "minpack"]
 	path = minpack
 	url = git@github.com:fortran-lang/minpack.git
+[submodule "cminpack"]
+	path = cminpack
+	url = git@github.com:devernay/cminpack.git
