@@ -33,3 +33,8 @@ ignore = ['TD003']
 
 [tool.pyright]
 reportInvalidTypeForm = false
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
