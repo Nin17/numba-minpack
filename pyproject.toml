@@ -36,5 +36,5 @@ reportInvalidTypeForm = false
 
 [tool.pytest.ini_options]
 addopts = [
-    "--import-mode=importlib",
+    "--import-mode=importlib", "--ignore=minpack/"
 ]
