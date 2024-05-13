@@ -53,6 +53,9 @@ jobs:
       uses: actions/checkout@v2
       with:
         submodules: recursive
+    - name: Install GFortran
+      run: |
+        brew install gcc
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
