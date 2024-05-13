@@ -47,17 +47,8 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9", "3.10", "3.11"]
-  
+
     steps:
-    - uses: ssciwr/setup-fortran@v0.1
-      id: setup-fortran
-      with:
-        compiler: gcc
-        version: 13
-        install_mkl: "true"
-    - run: |
-        ${{ env.FC }} ... # environment vars FC, CC, and CXX are set
-        ${{ steps.setup-fortran.outputs.fc }} ... # outputs work too
     - name: Checkout repository and submodules
       uses: actions/checkout@v2
       with:
@@ -82,8 +73,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-
-
   build-windows:
 
     runs-on: windows-latest
