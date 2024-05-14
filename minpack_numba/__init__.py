@@ -17,11 +17,14 @@ from .signatures import (
     lmdif_sig,
     lmstr_sig,
 )
-from .utils import address_as_void_pointer
+from .utils import address_as_void_pointer, check_cfunc, ptr_from_val, val_from_ptr
 
 __all__ = [
     # Utils
     "address_as_void_pointer",
+    "check_cfunc",
+    "ptr_from_val",
+    "val_from_ptr",
     # Signature
     "hybrd_sig",
     "hybrj_sig",

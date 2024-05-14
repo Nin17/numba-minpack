@@ -170,6 +170,36 @@ def check_cfunc(func: FunctionType, *args: NDArray | int) -> ct.c_int:
     return _func(*_args)
 
 
+def check_cfunc(func: FunctionType, *args: NDArray | int) -> ct.c_int:
+    """Check a numba cfunc with ctypes.
+
+    Parameters
+    ----------
+    func : types.FunctionType
+        The function to check.
+    *args : NDArray | int
+        The arguments to pass to the function.
+
+    Returns
+    -------
+    ct.c_int
+        The return value of the function.
+
+    """
+    _converter = {
+        ct.c_void_p: lambda x: x.ctypes.data,
+        ct.c_int: lambda x: x,
+        ct.POINTER(ct.c_int): lambda x: x.ctypes.data_as(ct.POINTER(ct.c_int)),
+        ct.POINTER(ct.c_double): lambda x: x.ctypes.data_as(ct.POINTER(ct.c_double)),
+        ct.POINTER(ct.c_float): lambda x: x.ctypes.data_as(ct.POINTER(ct.c_float)),
+    }
+
+    _func = func.ctypes
+    _args = [_converter[j](i) for i, j in zip(args, _func.argtypes)]
+
+    return _func(*_args)
+
+
 def get_extension_path(lib_name: str) -> str:
     """Get the path to the library with the given name in the parent directory.
 
