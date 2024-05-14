@@ -55,7 +55,8 @@ jobs:
         submodules: recursive
     - name: Install GFortran
       run: |
-        brew install gcc
+        brew install make automake libtool autoconf doxygen
+        brew reinstall gfortran
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
