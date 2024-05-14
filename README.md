@@ -1,5 +1,11 @@
 # minpack_numba
 
-A [numba](https://numba.pydata.org) wrapper of the [cminpack](https://github.com/devernay/cminpack/tree/master) and [minpack](https://github.com/fortran-lang/minpack/tree/main) libraries.
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+A numba wrapper of minpack.
+
+## Installation
+
+```shell
+pip install minpack_numba
+```
