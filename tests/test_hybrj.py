@@ -5,8 +5,8 @@ from numpy import array, empty, finfo, float64, full, int32, ones, sqrt
 from numpy.linalg import norm
 from numpy.testing import assert_allclose, assert_equal
 
-from minpack_numba import hybrj, hybrj1, hybrj1_, hybrj_, hybrj_sig
-from minpack_numba.utils import ptr_from_val, val_from_ptr
+from numba_minpack import hybrj, hybrj1, hybrj1_, hybrj_, hybrj_sig
+from numba_minpack.utils import ptr_from_val, val_from_ptr
 
 from .test_hybrd import UDATA, trial_hybrd_fcn, trial_hybrd_fcn_udata
 

@@ -3,7 +3,7 @@
 from numpy import finfo, float64
 from numpy.testing import assert_equal
 
-from minpack_numba import dpmpar
+from numba_minpack import dpmpar
 
 
 def test_machine_precision_double() -> None:

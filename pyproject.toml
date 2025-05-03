@@ -3,17 +3,16 @@ build-backend = 'mesonpy'
 requires = ['meson-python']
 
 [project]
-name = 'minpack_numba'
+name = 'numba-minpack'
 version = '0.1.0'
 description = 'A numba compatible wrapper of modern minpack.'
 readme = 'README.md'
 license = {file = 'LICENSE'}
-authors = [{name = 'Chris Ninham', email = 'christopher.ninham@creatis.insa-lyon.fr'},]
+authors = [{name = 'Chris Ninham', email = 'christopher.ninham@insa-lyon.fr'},]
 dependencies = ['numba', 'numpy'] # TODO(nin17): Add version of numba & numpy required
 
 [project.optional-dependencies]
-tests = ['pytest', 'pytest-benchmark', 'scipy', 'NumbaMinpack']
-dev = ['ruff',]
+dev = ['pytest', 'pytest-env', 'ruff', 'scipy']
 
 [tool.ruff]
 line-length = 88
@@ -38,3 +37,6 @@ reportInvalidTypeForm = false
 addopts = [
     "--import-mode=importlib", "--ignore=minpack/"
 ]
+
+[tool.pytest_env]
+NUMBA_CAPTURED_ERRORS='new_style'
