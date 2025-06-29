@@ -16,5 +16,5 @@ python_sources = [
 py3.install_sources(
   python_sources,
   pure: false,
-  subdir: 'numba_minpack'
+  subdir: 'minpack_numba'
 )

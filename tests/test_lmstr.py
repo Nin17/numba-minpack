@@ -5,8 +5,8 @@ from numpy import array, empty, finfo, float64, int32, ones, sqrt
 from numpy.linalg import norm
 from numpy.testing import assert_allclose, assert_equal
 
-from numba_minpack import lmstr, lmstr1, lmstr1_, lmstr_, lmstr_sig
-from numba_minpack.utils import ptr_from_val, val_from_ptr
+from minpack_numba import lmstr, lmstr1, lmstr1_, lmstr_, lmstr_sig
+from minpack_numba.utils import ptr_from_val, val_from_ptr
 
 # ruff: noqa: ANN001, ARG001, PLR2004
 

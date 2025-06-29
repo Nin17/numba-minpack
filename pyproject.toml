@@ -3,7 +3,7 @@ build-backend = 'mesonpy'
 requires = ['meson-python']
 
 [project]
-name = 'numba-minpack'
+name = 'minpack-numba'
 version = '0.1.0'
 description = 'A numba compatible wrapper of modern minpack.'
 readme = 'README.md'
